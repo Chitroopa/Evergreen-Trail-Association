@@ -6,6 +6,7 @@ import { HikeProjectListComponent } from './hike-project-list/hike-project-list.
 import { HikeProjectDetailComponent } from './hike-project-detail/hike-project-detail.component';
 import { HikeProjectEditComponent } from './hike-project-edit/hike-project-edit.component';
 import { AboutComponent } from './about/about.component';
+import { HikeProjectJoinComponent } from './hike-project-join/hike-project-join.component';
 
 const appRoutes: Routes = [
   {
@@ -31,6 +32,10 @@ const appRoutes: Routes = [
   {
     path: 'about',
     component: AboutComponent
+  },
+  {
+    path: 'upcoming-events/detail/join/:id',
+    component: HikeProjectJoinComponent
   }
 ];
 

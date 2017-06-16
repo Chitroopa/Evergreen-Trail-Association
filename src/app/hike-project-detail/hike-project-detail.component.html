@@ -6,6 +6,9 @@
 <div class="row project-detail">
   <div class="container">
     <h2>{{(hikeProjectToDisplay | async)?.name}}</h2>
+    <div>
+      <h4>Volunteers so far: {{(hikeProjectToDisplay | async)?.availableVolunteers}}</h4>
+    </div>
     <div class="row">
       <div class="col-md-2">
         <p class="caption">Project date:</p>
@@ -56,7 +59,7 @@
       </div>
       <div class="col-md-10">
         {{(hikeProjectToDisplay | async)?.fitnessNotes}}
-      </div>      
+      </div>
     </div><hr>
     <div class="row">
       <div class="col-md-2">
@@ -76,5 +79,6 @@
       </div>
       {{(hikeProjectToDisplay | async)?.campingType}}
     </div><hr>
+    <button type="button" class="btn btn-primary"(click)="joinHikeProject()">Join</button>
   </div>
 </div>

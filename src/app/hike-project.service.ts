@@ -28,6 +28,13 @@ export class HikeProjectService {
     projectEntryInFirebase.remove();
   }
 
+  updateHikeProjectVolunteer(hikeProjectId, volunteersJoined) {
+    var projectEntryInFirebase = this.getHikeProjectById(hikeProjectId);
+    projectEntryInFirebase.update({
+      availableVolunteers: volunteersJoined
+    });
+  }
+  
   updateHikeProject(localUpdatedProject) {
     var projectEntryInFirebase = this.getHikeProjectById(localUpdatedProject.$key);
     projectEntryInFirebase.update({

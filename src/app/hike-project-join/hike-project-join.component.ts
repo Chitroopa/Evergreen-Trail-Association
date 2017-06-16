@@ -6,20 +6,15 @@ import { Location } from '@angular/common';
 
 import { HikeProject } from '../hike-project.model';
 import { HikeProjectService } from '../hike-project.service';
-
-
 @Component({
-  selector: 'app-hike-project-detail',
-  templateUrl: './hike-project-detail.component.html',
-  styleUrls: ['./hike-project-detail.component.css'],
+  selector: 'app-hike-project-join',
+  templateUrl: './hike-project-join.component.html',
+  styleUrls: ['./hike-project-join.component.css'],
   providers: [HikeProjectService]
 })
-
-export class HikeProjectDetailComponent implements OnInit {
-
+export class HikeProjectJoinComponent implements OnInit {
   hikeProjectId: string;
-  hikeProjectToDisplay;
-
+  hikeProjectToJoin;
   constructor(
     private router: Router,
     private route: ActivatedRoute,
@@ -31,11 +26,16 @@ export class HikeProjectDetailComponent implements OnInit {
     this.route.params.forEach((urlParameters) => {
       this.hikeProjectId = (urlParameters['id']);
     });
-    this.hikeProjectToDisplay = this.hikeProjectService.getHikeProjectById(this.hikeProjectId);
+    this.hikeProjectService.getHikeProjectById(this.hikeProjectId).subscribe(dataLastEmittedFromObserver => {
+      this.hikeProjectToJoin = dataLastEmittedFromObserver;
+    });
   }
 
-  joinHikeProject() {
-    this.router.navigate(['upcoming-events/detail/join/', this.hikeProjectId]);
+  submitFund(newName: string, newEmail: string) {
+    var volunteersJoined = parseInt(this.hikeProjectToJoin.availableVolunteers) + 1;
+    this.hikeProjectService.updateHikeProjectVolunteer(this.hikeProjectId, volunteersJoined);
+    this.router.navigate(['upcoming-events/detail/', this.hikeProjectId]);
   }
+
 
 }

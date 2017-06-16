@@ -1,0 +1,8 @@
+<h2>{{(hikeProjectToJoin)?.name}}</h2>
+<form>
+  <label>Enter your Name</label>
+  <input class="form-control" #newName><br>
+  <label>Email</label>
+  <input  class="form-control" #newEmail><br>
+  <button class="btn btn-success" (click)="submitFund(newName.value, newEmail.value);newName.value=''; newEmail.value=''">Submit</button>
+</form>
