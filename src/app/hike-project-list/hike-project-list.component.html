@@ -10,10 +10,18 @@
         <option value="Strenuous">Strenuous</option>
       </select>
     </div>
+    <div class="col-md-2">
+      <select (change)="onChangeType($event.target.value)">
+        <option  value="all" selected="selected">All Trips</option>
+        <option value="day">Day Project</option>
+        <option value="extended">Extended Trip</option>
+        <option value="short">Short Trip</option>
+      </select>
+    </div>
   </div>
 </div>
 
-<div *ngFor="let hikeProject of hikeProjects | async | level:filterByLevel">
+<div *ngFor="let hikeProject of hikeProjects | async | level:filterByLevel | tripType:filterByType">
   <div class="col-md-4">
     <div class="card">
       <img class="card-img-top" src={{hikeProject.imageUrl}} alt="Card image cap">

@@ -14,6 +14,7 @@ import { HikeProjectListComponent } from './hike-project-list/hike-project-list.
 import { HikeProjectDetailComponent } from './hike-project-detail/hike-project-detail.component';
 import { HikeProjectEditComponent } from './hike-project-edit/hike-project-edit.component';
 import { LevelPipe } from './level.pipe';
+import { TripTypePipe } from './trip-type.pipe';
 
 
 export const firebaseConfig = {
@@ -32,7 +33,8 @@ export const firebaseConfig = {
     HikeProjectListComponent,
     HikeProjectDetailComponent,
     HikeProjectEditComponent,
-    LevelPipe
+    LevelPipe,
+    TripTypePipe
   ],
   imports: [
     BrowserModule,
