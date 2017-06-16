@@ -1,0 +1,22 @@
+
+<div *ngFor="let hikeProject of hikeProjects | async">
+  <div class="col-md-4">
+    <div class="card">
+      <img class="card-img-top" src={{hikeProject.imageUrl}} alt="Card image cap">
+      <div class="card-block">
+        <h4 class="card-title">{{hikeProject.name}}</h4>
+        <p class="card-text">
+          {{hikeProject.type}} | {{hikeProject.fitnessLevel}}
+        </p>
+        <a (click)='goToDetailHikeProject(hikeProject)' class="btn btn-primary">See details</a>
+        <!-- <div *ngIf="currentRoute === '/admin'">
+          <p class="card-text">
+            {{project.description}}
+          </p>
+          <hr>
+          <app-project-edit [selectedProject]="project"></app-project-edit>
+        </div> -->
+      </div>
+    </div>
+  </div>
+</div>

@@ -10,9 +10,20 @@ import { HikeProjectService } from '../hike-project.service';
 })
 export class AdminComponent implements OnInit {
 
+  newProjectFormShow: boolean = false;
+
   constructor(private hikeProjectService: HikeProjectService) { }
 
   ngOnInit() { }
+
+
+  newProjectForm() {
+    this.newProjectFormShow = true;
+  }
+
+  newProjectFormHide() {
+    this.newProjectFormShow = false;
+  }
 
   submitForm(newName: string,newStartDate: number,newEndDate: number,newRegion: string,newImageUrl: string,newType: string,newLeader: string,newElevation: string,newDescription: string,newLevel: string,newNotes: string,newTotalHiking: string,newRequiredVolunteers: string,newCampingType: string) {
 
@@ -23,7 +34,7 @@ export class AdminComponent implements OnInit {
     var newHikeProject = new HikeProject (newName,newStartDate,newEndDate,newRegion,newImageUrl,newType,newLeader,newElevationFormated,newDescription,newLevel,newNotes,newTotalHikingFormated,newRequiredVolunteersFormated,newCampingType)
     console.log(newHikeProject);
     this.hikeProjectService.addHikeProject(newHikeProject);
-
+    this.newProjectFormShow = false;
   }
 
 

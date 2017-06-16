@@ -1,4 +1,6 @@
-<div class="row">
+<button type="button" (click)="newProjectForm()" class="btn btn-primary">Add new Hike Project</button>
+
+<div class="row" *ngIf="newProjectFormShow">
   <div class="col-md-2"></div>
   <div class="col-md-8">
     <form>
@@ -45,6 +47,7 @@
         <option>Developed Campground</option>
       </select><br>
       <button type="button" class="btn btn-primary" (click)='submitForm(newName.value,newStartDate.value,newEndDate.value,newRegion.value,newImageUrl.value,newType.value,newLeader.value,newElevation.value,newDescription.value,newLevel.value,newNotes.value,newTotalHiking.value,newRequiredVolunteers.value,newCampingType.value); newName.value="";newStartDate.value="";newEndDate.value="";newRegion.value="";newImageUrl.value="";newType.value="";newLeader.value="";newElevation.value="";newDescription.value="";newLevel.value="";newNotes.value="";newTotalHiking.value="";newRequiredVolunteers.value="";newCampingType.value=""'>Submit</button>
+      <button type="button" (click)="newProjectFormHide()" class="btn btn-primary">Cancel</button>
     </form>
   </div>
 

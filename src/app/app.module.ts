@@ -10,6 +10,8 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AppComponent } from './app.component';
 import { WelcomeComponent } from './welcome/welcome.component';
 import { AdminComponent } from './admin/admin.component';
+import { HikeProjectListComponent } from './hike-project-list/hike-project-list.component';
+import { HikeProjectDetailComponent } from './hike-project-detail/hike-project-detail.component';
 
 
 export const firebaseConfig = {
@@ -24,7 +26,9 @@ export const firebaseConfig = {
   declarations: [
     AppComponent,
     WelcomeComponent,
-    AdminComponent
+    AdminComponent,
+    HikeProjectListComponent,
+    HikeProjectDetailComponent
   ],
   imports: [
     BrowserModule,
