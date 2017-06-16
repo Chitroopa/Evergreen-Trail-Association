@@ -19,7 +19,9 @@ _Admin has access to create a new hike project, update and delete_
 git clone https://github.com/Chitroopa/Evergreen-Trail-Association
 cd Evergreen-Trail-Association
 npm install
-bower install
+bower init
+bower install bootstrap
+npm install promise-polyfill --save-exact 
 ```
 
 ## Development server
