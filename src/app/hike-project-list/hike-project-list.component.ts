@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FirebaseListObservable } from 'angularfire2/database';
-import { HikeProject } from '../hike-project.model';
 import { Router } from '@angular/router';
+
+import { HikeProject } from '../hike-project.model';
 import { HikeProjectService } from '../hike-project.service';
 
 @Component({
@@ -13,8 +14,12 @@ import { HikeProjectService } from '../hike-project.service';
 export class HikeProjectListComponent implements OnInit {
 
   hikeProjects: FirebaseListObservable<any[]>;
+  currentRoute: string = this.router.url;
 
-  constructor(private router: Router, private hikeProjectService: HikeProjectService) { }
+  constructor(
+    private router: Router,
+    private hikeProjectService: HikeProjectService
+  ) { }
 
   ngOnInit() {
     this.hikeProjects = this.hikeProjectService.getHikeProjects();
@@ -22,6 +27,12 @@ export class HikeProjectListComponent implements OnInit {
 
   goToDetailHikeProject(clickedHikeProject) {
     this.router.navigate(['upcoming-events/detail', clickedHikeProject.$key]);
+  }
+
+  deleteHikeProject(clickedHikeProject) {
+    if(confirm("Are you sure? Do you want to delete this hike project?")){
+     this.hikeProjectService.deleteHikeProject(clickedHikeProject.$key);
+   }
   }
 
 }

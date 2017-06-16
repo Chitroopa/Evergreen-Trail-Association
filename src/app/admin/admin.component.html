@@ -1,4 +1,4 @@
-<button type="button" (click)="newProjectForm()" class="btn btn-primary">Add new Hike Project</button>
+<button type="button" (click)="newProjectForm()" class="btn btn-primary">Add new Hike Project</button><br><br>
 
 <div class="row" *ngIf="newProjectFormShow">
   <div class="col-md-2"></div>
@@ -50,5 +50,5 @@
       <button type="button" (click)="newProjectFormHide()" class="btn btn-primary">Cancel</button>
     </form>
   </div>
-
 </div>
+<app-hike-project-list></app-hike-project-list>

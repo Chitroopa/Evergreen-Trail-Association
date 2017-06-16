@@ -9,13 +9,14 @@
           {{hikeProject.type}} | {{hikeProject.fitnessLevel}}
         </p>
         <a (click)='goToDetailHikeProject(hikeProject)' class="btn btn-primary">See details</a>
-        <!-- <div *ngIf="currentRoute === '/admin'">
-          <p class="card-text">
-            {{project.description}}
-          </p>
-          <hr>
-          <app-project-edit [selectedProject]="project"></app-project-edit>
-        </div> -->
+        <div *ngIf="currentRoute === '/admin'">
+          <!-- <p class="card-text">
+            {{hikeProject.description}}
+          </p> -->
+          <!-- <app-hike-project-edit [selectedHikeProject]="hikeProject"></app-hike-project-edit> -->
+          <app-hike-project-edit></app-hike-project-edit>
+          <button type="button" (click)="deleteHikeProject(hikeProject)" class="btn btn-danger">Delete</button>
+        </div>
       </div>
     </div>
   </div>

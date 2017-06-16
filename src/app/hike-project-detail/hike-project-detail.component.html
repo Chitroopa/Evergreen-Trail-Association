@@ -1,3 +1,80 @@
-<p>
-  hike-project-detail works!
-</p>
+ <div class="row">
+  <div class="col-md-12">
+    <img class="image-detail" src='{{(hikeProjectToDisplay | async)?.imageUrl}}' alt="" />
+  </div>
+</div>
+<div class="row project-detail">
+  <div class="container">
+    <h2>{{(hikeProjectToDisplay | async)?.name}}</h2>
+    <div class="row">
+      <div class="col-md-2">
+        <p class="caption">Project date:</p>
+      </div>
+      {{(hikeProjectToDisplay | async)?.startDate}} to {{(hikeProjectToDisplay | async)?.endDate}}
+    </div><hr>
+    <div class="row">
+      <div class="col-md-2">
+        <p class="caption">Region:</p>
+      </div>
+      {{(hikeProjectToDisplay | async)?.region}}
+    </div><hr>
+    <div class="row">
+      <div class="col-md-2">
+        <p class="caption">Project type:</p>
+      </div>
+      {{(hikeProjectToDisplay | async)?.type}}
+    </div><hr>
+    <div class="row">
+      <div class="col-md-2">
+        <p class="caption">Crew leader:</p>
+      </div>
+      {{(hikeProjectToDisplay | async)?.leader}}
+    </div><hr>
+    <div class="row">
+      <div class="col-md-2">
+        <p class="caption">Elevation (ft):</p>
+      </div>
+      {{(hikeProjectToDisplay | async)?.elevation}}
+    </div><hr>
+    <div class="row">
+      <div class="col-md-2">
+        <p class="caption">Project description:</p>
+      </div>
+      <div class="col-md-10">
+        {{(hikeProjectToDisplay | async)?.description}}
+      </div>
+    </div><hr>
+    <div class="row">
+      <div class="col-md-2">
+        <p class="caption">Fitness level:</p>
+      </div>
+      {{(hikeProjectToDisplay | async)?.fitnessLevel}}
+    </div><hr>
+    <div class="row">
+      <div class="col-md-2">
+        <p class="caption">Notes on fitness level:</p>
+      </div>
+      <div class="col-md-10">
+        {{(hikeProjectToDisplay | async)?.fitnessNotes}}
+      </div>      
+    </div><hr>
+    <div class="row">
+      <div class="col-md-2">
+        <p class="caption">Total hiking miles per day:</p>
+      </div>
+      {{(hikeProjectToDisplay | async)?.totalHiking}}
+    </div><hr>
+    <div class="row">
+      <div class="col-md-2">
+        <p class="caption">Maximum number of volunteers:</p>
+      </div>
+      {{(hikeProjectToDisplay | async)?.requiredVolunteers}}
+    </div><hr>
+    <div class="row">
+      <div class="col-md-2">
+        <p class="caption">Camping Type:</p>
+      </div>
+      {{(hikeProjectToDisplay | async)?.campingType}}
+    </div><hr>
+  </div>
+</div>

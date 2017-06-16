@@ -1,0 +1,19 @@
+.image-detail {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-height: 500px;
+}
+
+
+
+.project-detail {
+  padding-top: 510px;
+}
+.project-detail h2 {
+  text-align: center;
+}
+.caption {
+  font-weight: bold;
+}
