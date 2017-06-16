@@ -1,0 +1,17 @@
+{
+  "name": "evergreen-trail-association",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Chitroopa Manikkavasagam <chitroopa72193@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
