@@ -1,5 +1,19 @@
+<div class="well">
+  <h2>Filters</h2>
+  <div class="row">
+    <div class="col-md-2">
+      <select (change)="onChangeLevel($event.target.value)">
+        <option value="all" selected="selected">All fitness level</option>
+        <option value="Easy-Moderate">Easy-Moderate</option>
+        <option value="Moderate">Moderate</option>
+        <option value="Moderate-Difficult">Moderate-Difficult</option>
+        <option value="Strenuous">Strenuous</option>
+      </select>
+    </div>
+  </div>
+</div>
 
-<div *ngFor="let hikeProject of hikeProjects | async">
+<div *ngFor="let hikeProject of hikeProjects | async | level:filterByLevel">
   <div class="col-md-4">
     <div class="card">
       <img class="card-img-top" src={{hikeProject.imageUrl}} alt="Card image cap">

@@ -15,6 +15,7 @@ export class HikeProjectListComponent implements OnInit {
 
   hikeProjects: FirebaseListObservable<any[]>;
   currentRoute: string = this.router.url;
+  filterByLevel: string = "all";
 
   constructor(
     private router: Router,
@@ -38,4 +39,10 @@ export class HikeProjectListComponent implements OnInit {
   updateHikeProject(clickedHikeProject) {
     this.router.navigate(['hike-projects/delete', clickedHikeProject.$key]);
   }
+
+  onChangeLevel(option) {
+    this.filterByLevel = option;
+    console.log(this.filterByLevel);
+  }
+
 }
