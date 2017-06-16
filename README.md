@@ -2,6 +2,26 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.0.0.
 
+#### _javaScript Week4 independent project, 06/16/2017_
+
+#### By _**Chitroopa Manikkavasagam**_
+
+## Description
+
+_Evergreen Trail Association allows volunteers to view list of upcoming events and join them_
+
+_Admin has access to create a new hike project, update and delete_
+
+### Setup/Installation Requirements
+
+* _In the command line, run:_
+```
+git clone https://github.com/Chitroopa/Evergreen-Trail-Association
+cd Evergreen-Trail-Association
+npm install
+bower install
+```
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
