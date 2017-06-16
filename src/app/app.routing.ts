@@ -5,6 +5,7 @@ import { AdminComponent } from './admin/admin.component';
 import { HikeProjectListComponent } from './hike-project-list/hike-project-list.component';
 import { HikeProjectDetailComponent } from './hike-project-detail/hike-project-detail.component';
 import { HikeProjectEditComponent } from './hike-project-edit/hike-project-edit.component';
+import { AboutComponent } from './about/about.component';
 
 const appRoutes: Routes = [
   {
@@ -26,6 +27,10 @@ const appRoutes: Routes = [
   {
     path: 'hike-projects/delete/:id',
     component: HikeProjectEditComponent
+  },
+  {
+    path: 'about',
+    component: AboutComponent
   }
 ];
 
