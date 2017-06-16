@@ -28,4 +28,23 @@ export class HikeProjectService {
     projectEntryInFirebase.remove();
   }
 
+  updateHikeProject(localUpdatedProject) {
+    var projectEntryInFirebase = this.getHikeProjectById(localUpdatedProject.$key);
+    projectEntryInFirebase.update({
+      name: localUpdatedProject.name,
+      startDate: localUpdatedProject.startDate,
+      endDate: localUpdatedProject.endDate,
+      region: localUpdatedProject.region,
+      imageUrl: localUpdatedProject.imageUrl,
+      type: localUpdatedProject.type,
+      leader: localUpdatedProject.leader,
+      elevation: localUpdatedProject.elevation,
+      fitnessLevel: localUpdatedProject.fitnessLevel,
+      fitnessNotes: localUpdatedProject.fitnessNotes,
+      totalHiking: localUpdatedProject.totalHiking,
+      requiredVolunteers: localUpdatedProject.requiredVolunteers,
+      campingType: localUpdatedProject.campingType
+    });
+  }
+
 }

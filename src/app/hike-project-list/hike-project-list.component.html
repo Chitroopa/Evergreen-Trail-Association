@@ -10,12 +10,13 @@
         </p>
         <a (click)='goToDetailHikeProject(hikeProject)' class="btn btn-primary">See details</a>
         <div *ngIf="currentRoute === '/admin'">
-          <!-- <p class="card-text">
-            {{hikeProject.description}}
-          </p> -->
-          <!-- <app-hike-project-edit [selectedHikeProject]="hikeProject"></app-hike-project-edit> -->
-          <app-hike-project-edit></app-hike-project-edit>
-          <button type="button" (click)="deleteHikeProject(hikeProject)" class="btn btn-danger">Delete</button>
+          <div class="row">
+            <div class="col-md-8">
+              <br>
+              <button type="button" (click)="updateHikeProject(hikeProject)" class="btn btn-success">Update</button>
+              <button type="button" (click)="deleteHikeProject(hikeProject)" class="btn btn-danger">Delete</button>
+            </div>
+          </div>
         </div>
       </div>
     </div>

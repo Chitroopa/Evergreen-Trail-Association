@@ -4,6 +4,7 @@ import { WelcomeComponent } from './welcome/welcome.component';
 import { AdminComponent } from './admin/admin.component';
 import { HikeProjectListComponent } from './hike-project-list/hike-project-list.component';
 import { HikeProjectDetailComponent } from './hike-project-detail/hike-project-detail.component';
+import { HikeProjectEditComponent } from './hike-project-edit/hike-project-edit.component';
 
 const appRoutes: Routes = [
   {
@@ -21,8 +22,11 @@ const appRoutes: Routes = [
   {
     path: 'upcoming-events/detail/:id',
     component: HikeProjectDetailComponent
+  },
+  {
+    path: 'hike-projects/delete/:id',
+    component: HikeProjectEditComponent
   }
 ];
-
 
 export const routing: ModuleWithProviders = RouterModule.forRoot(appRoutes);

@@ -2,7 +2,8 @@ export class HikeProject {
 
   public availableVolunteers: number = 0;
 
-  constructor(public name: string,
+  constructor(
+    public name: string,
     public startDate: number,
     public endDate: number,
     public region: string,
@@ -16,5 +17,5 @@ export class HikeProject {
     public totalHiking: number,
     public requiredVolunteers: number,
     public campingType: string
-  ) {}
+  ) { }
 }

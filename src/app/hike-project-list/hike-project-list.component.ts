@@ -31,8 +31,11 @@ export class HikeProjectListComponent implements OnInit {
 
   deleteHikeProject(clickedHikeProject) {
     if(confirm("Are you sure? Do you want to delete this hike project?")){
-     this.hikeProjectService.deleteHikeProject(clickedHikeProject.$key);
-   }
+      this.hikeProjectService.deleteHikeProject(clickedHikeProject.$key);
+    }
   }
 
+  updateHikeProject(clickedHikeProject) {
+    this.router.navigate(['hike-projects/delete', clickedHikeProject.$key]);
+  }
 }
