@@ -6,7 +6,7 @@
       <li class="nav-item active">
         <!-- <a class="nav-link" routerLink="start-a-project">Start a project <span class="sr-only">(current)</span></a> -->
 
-        <a class="nav-link">Welcome <span class="sr-only">(current)</span></a>
+        <a class="nav-link" routerLink="welcome">Welcome <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="#">Upcoming Events</a>
@@ -14,18 +14,20 @@
       <li class="nav-item">
         <a class="nav-link" href="#">About us</a>
       </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="admin">Admin</a>
+      </li>
     </ul>
   </div>
 </nav>
 
 <div class="container">
   {{title}}
-  <!-- <router-outlet></router-outlet> -->
+  <router-outlet></router-outlet>
 </div>
 
-<footer class="footer">
+<!-- <footer class="footer">
   <div class="container">
-    <!-- <a class="text-muted" routerLink="admin">Admin</a> -->
-    <a class="text-muted">Admin</a>
+    <a class="text-muted" routerLink="admin">Admin</a>
   </div>
-</footer>
+</footer> -->
