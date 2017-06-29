@@ -14,6 +14,8 @@ _Admin has access to create a new hike project, update and delete_
 
 ### Setup/Installation Requirements
 
+* Deployed at https://evergreentrailassociation.firebaseapp.com/
+
 * _In the command line, run:_
 ```
 git clone https://github.com/Chitroopa/Evergreen-Trail-Association
